@@ -8,7 +8,7 @@ Key Features
 
 - Modality-Specific Priors
 
-Each omics layer (e.g., Spatial, RNA, ATAC) has its own learned prior distribution. We encode the preprocseed highquality cells/spots of each modality into a latent space with mean and variance. This allows the model to adapt to modality-specific variations in feature distributions. Unlike standard VAEs, where a single Gaussian prior is used, this approach enables better multi-omics integration.
+Each omics layer (e.g., Spatial, RNA, ATAC) has its own learned prior distribution. We encode the preprocseed highquality cells/spots (analysed on seurat/scanpy/signac) of each modality into a latent space with mean and variance. This allows the model to adapt to modality-specific variations in feature distributions. Unlike standard VAEs, where a single Gaussian prior is used, this approach enables better multi-omics integration.
 
 
 - Fusion via a Shared Latent Space (Latent Space Fusion)
