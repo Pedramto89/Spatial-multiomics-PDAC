@@ -1,4 +1,4 @@
-Multi-Modal VAE with Modality-Specific Priors
+**Multi-Modal VAE with Modality-Specific Priors**
 
 Overview
 
@@ -6,7 +6,7 @@ This repository contains an implementation of a Multi-Modal Variational Autoenco
 
 Key Features
 
-✅ Modality-Specific Priors
+- Modality-Specific Priors
 
 Each omics layer (e.g., Spatial, RNA, ATAC) has its own learned prior distribution including mean and variance.
 
@@ -15,7 +15,7 @@ This allows the model to adapt to modality-specific variations in feature distri
 Unlike standard VAEs, where a single Gaussian prior is used, this approach enables better multi-omics integration.
 
 
-✅ Fusion via a Shared Latent Space (Latent Space Fusion)
+- Fusion via a Shared Latent Space (Latent Space Fusion)
 
 Each omics type passes through a separate encoder but contributes to a shared latent space. 
 
