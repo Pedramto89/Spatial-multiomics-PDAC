@@ -1,10 +1,6 @@
-# Spatial Multiomics PDAC
+# About
 
-This repository contains the analysis code and workflows for spatial transcriptomics analysis of Pancreatic Ductal Adenocarcinoma (PDAC).
-
-## About
-
-This project investigates spatial transcriptomics data to understand the tumor microenvironment in pancreatic cancer. 
+The Docker image is built to convert initial spatial and single-cell datasets from RDS format to H5AD format.
 
 ## Requirements
 
