@@ -1,5 +1,3 @@
-**Multi-Modal VAE with Modality-Specific Priors**
-
 # Spatial Multi‑Omics Integration in Pancreatic Cancer
 
 **Goal:** Integrate spatial transcriptomics with single‑cell RNA‑seq and ATAC‑seq from pancreatic ductal adenocarcinoma (PDAC) to reveal spatially‑resolved tumor–stroma interactions using a Graph Neural Network–enhanced Multi‑Modal Variational Autoencoder (VAE).
