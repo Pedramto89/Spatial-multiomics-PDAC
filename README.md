@@ -6,7 +6,7 @@
 
 ## Key Ideas
 - **Graph Neural Networks (GNNs)** preserve spatial proximity between cells/spots.
-- **Modality‑specific priors** in the VAE respect unique data distributions (spatial, RNA, ATAC).
+- **Modality‑specific priors** in the VAE respect unique data distributions (spatial & RNA).
 - **Joint latent space** fuses modalities while retaining biological signals.
 - **Explainable AI (e.g., SHAP)** interprets latent features.
 
