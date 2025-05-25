@@ -1,28 +1,28 @@
 # Spatial Multi‑Omics Integration in Pancreatic Cancer
 
-**Goal:** Integrate spatial transcriptomics with single‑cell RNA‑seq and ATAC‑seq from pancreatic ductal adenocarcinoma (PDAC) to reveal spatially‑resolved tumor–stroma interactions using a Graph Neural Network–enhanced Multi‑Modal Variational Autoencoder (VAE).
+**Goal:** Integrate spatial transcriptomics with single‑cell RNA‑seq (scRNA‑seq) from pancreatic ductal adenocarcinoma (PDAC) to reveal spatially‑resolved tumor–stroma interactions using a Graph Neural Network–enhanced Multi‑Modal Variational Autoencoder (VAE).
 
 ---
 
 ## Key Ideas
 - **Graph Neural Networks (GNNs)** preserve spatial proximity between cells/spots.
-- **Modality‑specific priors** in the VAE respect unique data distributions (spatial & RNA).
+- **Modality‑specific priors** in the VAE respect the distinct data distributions of spatial and RNA modalities.
 - **Joint latent space** fuses modalities while retaining biological signals.
 - **Explainable AI (e.g., SHAP)** interprets latent features.
 
 ---
 
 ## Data
-- **Source:** Public dataset from *Ateeq M. Khaliq et al.,* **Nat Genet 2024** (30 matched primary & metastatic PDAC samples).
-- **Weblink:** https://www.nature.com/articles/s41588-024-01914-4  
-- **Status:** Already pre‑processed, quality‑controlled, doublet‑filtered (Seurat/Scanpy/Signac).
+- **Source:** Public dataset from *Ateeq M. Khaliq et al.*, **Nat Genet 2024** (30 matched primary & metastatic PDAC samples).
+- **Weblink:** https://www.nature.com/articles/s41588-024-01914-4
+- **Status:** Already pre‑processed, quality‑controlled, doublet‑filtered (Seurat/Scanpy).
 
 ---
 
 ## Workflow
 
 1. **Download & QC**  
-   - Pull spatial, scRNA‑seq, scATAC‑seq matrices.  
+   - Pull spatial and scRNA‑seq matrices.  
    - Confirm QC metrics; filter low‑quality cells/spots.
 
 2. **Graph Construction**  
@@ -31,7 +31,7 @@
 
 3. **Encoder Setup**  
    - Spatial encoder → GNN layers.  
-   - RNA & ATAC encoders → dense layers.  
+   - RNA encoder → dense layers.  
    - Learn **modality‑specific priors**.
 
 4. **Latent Fusion**  
