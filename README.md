@@ -36,7 +36,7 @@
 
 4. **Latent Fusion**  
    - Project each modality into a shared latent space.  
-   - Minimize reconstruction + KL losses.
+   - Optimize reconstruction loss.
 
 5. **Decoder & Reconstruction**  
    - Reconstruct original modalities from latent vector.  
@@ -52,6 +52,12 @@
    - Nominate biomarkers & therapeutic targets.
 
 ---
+
+## Expected Outcomes
+- **Method:** Open‑source framework for spatial multi‑omics integration.  
+- **Insights:** Spatially coherent signatures of tumor, stroma, and immune niches.  
+- **Applications:** Diagnostics, prognostics, and therapy guidance in PDAC and beyond.
+
 
 ## Expected Outcomes
 - **Method:** Open‑source framework for spatial multi‑omics integration.  
