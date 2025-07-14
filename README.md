@@ -1,20 +1,65 @@
-**Multi-Modal VAE with Modality-Specific Priors**
+# Spatial Multi‑Omics Integration in Pancreatic Cancer
 
-Overview
+**Goal:** Integrate spatial transcriptomics with single‑cell RNA‑seq (scRNA‑seq) from pancreatic ductal adenocarcinoma (PDAC) to reveal spatially‑resolved tumor–stroma interactions using a Graph Neural Network–enhanced Multi‑Modal Variational Autoencoder (VAE).
 
-This repository contains an implementation of a Multi-Modal Variational Autoencoder (VAE) designed for multi-omics data fusion. The model leverages modality-specific variational priors, allowing each omics layer to have its own learned distribution, which improves biological interpretability and robustness to missing data.
+---
 
-Key Features
+## Key Ideas
+- **Graph Neural Networks (GNNs)** preserve spatial proximity between cells/spots.
+- **Modality‑specific priors** in the VAE respect the distinct data distributions of spatial and RNA modalities.
+- **Joint latent space** fuses modalities while retaining biological signals.
+- **Explainable AI (e.g., SHAP)** interprets latent features.
 
-- Modality-Specific Priors
+---
 
-Each omics layer (e.g., Spatial, RNA, ATAC) has its own learned prior distribution. We encode the high-quality cells/spots (preprocessed/qcied/doubletremoved/featureselected on seurat/scanpy/signac with consensus parameters) of each modality into a latent space with mean and variance. This allows the model to adapt to modality-specific variations in feature distributions. Unlike standard VAEs, where a single Gaussian prior is used, this approach enables better multi-omics integration.
+## Data
+- **Source:** Public dataset from *Ateeq M. Khaliq et al.*, **Nat Genet 2024** (30 matched primary & metastatic PDAC samples).
+- **Weblink:** https://www.nature.com/articles/s41588-024-01914-4
+- **Status:** Already pre‑processed, quality‑controlled, doublet‑filtered (Seurat/Scanpy).
+
+---
+
+## Workflow
+
+1. **Download & QC**  
+   - Pull spatial and scRNA‑seq matrices.  
+   - Confirm QC metrics; filter low‑quality cells/spots.
+
+2. **Graph Construction**  
+   - Nodes: cells / spots.  
+   - Edges: spatial distance + expression similarity.
+
+3. **Encoder Setup**  
+   - Spatial encoder → GNN layers.  
+   - RNA encoder → dense layers.  
+   - Learn **modality‑specific priors**.
+
+4. **Latent Fusion**  
+   - Project each modality into a shared latent space.  
+   - Optimize reconstruction loss.
+
+5. **Decoder & Reconstruction**  
+   - Reconstruct original modalities from latent vector.  
+   - Evaluate with held‑out data.
+
+6. **Interpretation**  
+   - Apply SHAP to latent features.  
+   - Map important dimensions back to tissue coordinates.
+
+7. **Biological Analysis**  
+   - Identify spatial gene modules.  
+   - Detect tumor microenvironment niches.  
+   - Nominate biomarkers & therapeutic targets.
+
+---
+
+## Expected Outcomes
+- **Method:** Open‑source framework for spatial multi‑omics integration.  
+- **Insights:** Spatially coherent signatures of tumor, stroma, and immune niches.  
+- **Applications:** Diagnostics, prognostics, and therapy guidance in PDAC and beyond.
 
 
-- Fusion via a Shared Latent Space (Latent Space Fusion)
-
-Each omics type passes through a separate encoder but contributes to a shared latent space. The decoder reconstructs multiple outputs from this fused space, enabling joint representation learning. This fusion mechanism ensures that modalities influence each other while retaining modality-specific characteristics. An advatnage of building fusion model by concatenating different latent spaces is that different omics layers might have vastly different structures (e.g., RNA counts vs. chromatin accessibility), making early or input level fusion challenging.
-
-Maybe will expand incorporating cross-modal attention: Use attention-based architectures to weigh the importance of different modalities dynamically.
-
-... to be completed 
+## Expected Outcomes
+- **Method:** Open‑source framework for spatial multi‑omics integration.  
+- **Insights:** Spatially coherent signatures of tumor, stroma, and immune niches.  
+- **Applications:** Diagnostics, prognostics, and therapy guidance in PDAC and beyond.
