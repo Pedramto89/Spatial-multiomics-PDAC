@@ -14,7 +14,10 @@
 
 ## Data
 - **Source:** Public dataset from *Ateeq M. Khaliq et al.*, **Nat Genet 2024** (30 matched primary & metastatic PDAC samples).
-- **Weblink:** https://www.nature.com/articles/s41588-024-01914-4
+- **Article link:** https://doi.org/10.1038/s41588-024-01914-4
+- **Original Format:** RDS files provided by authors.
+- **Processed Format:** Converted to `h5ad` for compatibility with Scanpy-based tools.
+- **Access:** https://doi.org/10.6084/m9.figshare.28835765.v1
 - **Status:** Already pre‑processed, quality‑controlled, doublet‑filtered (Seurat/Scanpy).
 
 ---
@@ -52,12 +55,6 @@
    - Nominate biomarkers & therapeutic targets.
 
 ---
-
-## Expected Outcomes
-- **Method:** Open‑source framework for spatial multi‑omics integration.  
-- **Insights:** Spatially coherent signatures of tumor, stroma, and immune niches.  
-- **Applications:** Diagnostics, prognostics, and therapy guidance in PDAC and beyond.
-
 
 ## Expected Outcomes
 - **Method:** Open‑source framework for spatial multi‑omics integration.  
