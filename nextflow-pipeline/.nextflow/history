@@ -1,0 +1,1 @@
+2025-07-25 15:58:47	2.7s	distracted_wiles	ERR	b2500a8bf0fb913745bac35195c31088	44dc667b-7a40-4854-bbf6-b7cbfadbd8e7	nextflow run main.nf --input data/your_spatial_data.h5ad --outdir results

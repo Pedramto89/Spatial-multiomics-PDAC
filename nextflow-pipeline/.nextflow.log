@@ -1,0 +1,113 @@
+Jul.-25 15:58:46.976 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input data/your_spatial_data.h5ad --outdir results
+Jul.-25 15:58:47.016 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Jul.-25 15:58:47.035 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/pedram/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Jul.-25 15:58:47.053 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul.-25 15:58:47.054 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul.-25 15:58:47.055 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul.-25 15:58:47.063 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul.-25 15:58:47.090 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/pedram/.nextflow/secrets/store.json
+Jul.-25 15:58:47.096 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@6f3f0fae] - activable => nextflow.secret.LocalSecretsProvider@6f3f0fae
+Jul.-25 15:58:47.124 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Jul.-25 15:58:47.137 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [distracted_wiles] DSL2 - revision: b2500a8bf0
+Jul.-25 15:58:47.138 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul.-25 15:58:47.138 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jul.-25 15:58:47.174 [main] DEBUG nextflow.Session - Session UUID: 44dc667b-7a40-4854-bbf6-b7cbfadbd8e7
+Jul.-25 15:58:47.175 [main] DEBUG nextflow.Session - Run name: distracted_wiles
+Jul.-25 15:58:47.175 [main] DEBUG nextflow.Session - Executor pool size: 8
+Jul.-25 15:58:47.181 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul.-25 15:58:47.191 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul.-25 15:58:47.233 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (05:27 MDT)
+  System: Mac OS X 15.0.1
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.10+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 46685@Pedrams-MacBook-Air.local [127.0.0.1]
+  CPUs: 8 - Mem: 16 GB (128.6 MB) - Swap: 8 GB (848.4 MB)
+Jul.-25 15:58:47.251 [main] DEBUG nextflow.Session - Work-dir: /Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/work [Mac OS X]
+Jul.-25 15:58:47.251 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/bin
+Jul.-25 15:58:47.259 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul.-25 15:58:47.265 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul.-25 15:58:47.268 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul.-25 15:58:47.281 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul.-25 15:58:47.288 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Jul.-25 15:58:47.322 [main] DEBUG nextflow.Session - Session start
+Jul.-25 15:58:47.721 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul.-25 15:58:47.804 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul.-25 15:58:47.804 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul.-25 15:58:47.808 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul.-25 15:58:47.812 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Jul.-25 15:58:47.814 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jul.-25 15:58:47.833 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'GRAPH': maxForks=0; fair=false; array=0
+Jul.-25 15:58:47.860 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul.-25 15:58:47.860 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul.-25 15:58:47.860 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'EXTRACT_FEATURES': maxForks=0; fair=false; array=0
+Jul.-25 15:58:47.864 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul.-25 15:58:47.864 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul.-25 15:58:47.865 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'TRAIN': maxForks=0; fair=false; array=0
+Jul.-25 15:58:47.868 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul.-25 15:58:47.868 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul.-25 15:58:47.868 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'LATENT': maxForks=0; fair=false; array=0
+Jul.-25 15:58:47.871 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul.-25 15:58:47.872 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul.-25 15:58:47.872 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'UMAP': maxForks=0; fair=false; array=0
+Jul.-25 15:58:47.875 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul.-25 15:58:47.875 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul.-25 15:58:47.876 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ANALYSIS': maxForks=0; fair=false; array=0
+Jul.-25 15:58:47.877 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: GRAPH, UMAP, LATENT, EXTRACT_FEATURES, ANALYSIS, TRAIN
+Jul.-25 15:58:47.879 [main] DEBUG nextflow.Session - Igniting dataflow network (7)
+Jul.-25 15:58:47.884 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GRAPH
+Jul.-25 15:58:47.884 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > EXTRACT_FEATURES
+Jul.-25 15:58:47.884 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > TRAIN
+Jul.-25 15:58:47.885 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > LATENT
+Jul.-25 15:58:47.885 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > UMAP
+Jul.-25 15:58:47.885 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ANALYSIS
+Jul.-25 15:58:47.885 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_44a91f5300415bad: /Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/main.nf
+Jul.-25 15:58:47.885 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul.-25 15:58:47.885 [main] DEBUG nextflow.Session - Session await
+Jul.-25 15:58:47.943 [Actor Thread 9] DEBUG nextflow.util.HashBuilder - Unable to get file attributes file: /Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/data/your_spatial_data.h5ad -- Cause: java.nio.file.NoSuchFileException: /Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/data/your_spatial_data.h5ad
+Jul.-25 15:58:47.943 [Actor Thread 7] DEBUG nextflow.util.HashBuilder - Unable to get file attributes file: /Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/data/your_spatial_data.h5ad -- Cause: java.nio.file.NoSuchFileException: /Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/data/your_spatial_data.h5ad
+Jul.-25 15:58:47.991 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul.-25 15:58:47.992 [Task submitter] INFO  nextflow.Session - [56/06bae9] Submitted process > EXTRACT_FEATURES (1)
+Jul.-25 15:58:47.998 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul.-25 15:58:47.998 [Task submitter] INFO  nextflow.Session - [07/cbebd5] Submitted process > GRAPH (1)
+Jul.-25 15:58:49.463 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: EXTRACT_FEATURES (1); status: COMPLETED; exit: 1; error: -; workDir: /Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/work/56/06bae96f0b2f93616792c2608c12c7]
+Jul.-25 15:58:49.464 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul.-25 15:58:49.474 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=EXTRACT_FEATURES (1); work-dir=/Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/work/56/06bae96f0b2f93616792c2608c12c7
+  error [nextflow.exception.ProcessFailedException]: Process `EXTRACT_FEATURES (1)` terminated with an error exit status (1)
+Jul.-25 15:58:49.488 [TaskFinalizer-1] ERROR nextflow.processor.TaskProcessor - Error executing process > 'EXTRACT_FEATURES (1)'
+
+Caused by:
+  Process `EXTRACT_FEATURES (1)` terminated with an error exit status (1)
+
+
+Command executed:
+
+  python3 /Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/scripts/extract_image_features.py             --input your_spatial_data.h5ad             --output image_features.npy
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  Traceback (most recent call last):
+    File "/Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/scripts/extract_image_features.py", line 3, in <module>
+      import tensorflow as tf
+  ModuleNotFoundError: No module named 'tensorflow'
+
+Work dir:
+  /Users/pedram/Documents/Research/Deep_Learning/Github_io/Spatial-multiomics-PDAC/nextflow-pipeline/work/56/06bae96f0b2f93616792c2608c12c7
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Jul.-25 15:58:49.494 [TaskFinalizer-1] DEBUG nextflow.Session - Session aborted -- Cause: Process `EXTRACT_FEATURES (1)` terminated with an error exit status (1)
+Jul.-25 15:58:49.508 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jul.-25 15:58:49.508 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul.-25 15:58:49.508 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul.-25 15:58:49.512 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+Jul.-25 15:58:49.522 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=1; succeedDuration=0ms; failedDuration=1.4s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Jul.-25 15:58:49.714 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul.-25 15:58:49.723 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
