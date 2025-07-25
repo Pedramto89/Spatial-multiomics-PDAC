@@ -2,13 +2,13 @@
 
 A **Nextflow DSL2 pipeline** for analyzing spatial transcriptomics data using **Graph Neural Networks (GNNs)** with integrated histological image features.
 
-## 🔬 Overview
+## Overview
 
 This pipeline integrates spatial transcriptomics data with graph neural networks to perform tissue classification and spatial pattern analysis. It combines gene expression data, spatial coordinates, and histological image features to classify tissue types in pancreatic cancer samples.
 
 **Key Innovation**: Integration of molecular (gene expression) and morphological (image) features through graph neural networks for spatial tissue analysis.
 
-## 🏗️ Pipeline Workflow
+##️ Pipeline Workflow
 
 The pipeline consists of 6 main processes executed sequentially:
 
@@ -50,7 +50,7 @@ Input Data → Graph Construction → Image Features → GNN Training → Latent
 | `main.nf` | Main Nextflow workflow definition (DSL2) |
 | `envs/gnn.yml` | Complete conda environment specification |
 
-## 🎯 Scalability & Reproducibility
+## Scalability & Reproducibility
 
 ### Scalability Features
 
@@ -110,7 +110,7 @@ Designed for **pancreatic cancer spatial transcriptomics** analysis, distinguish
 
 The approach is adaptable to other tissue types and spatial transcriptomics applications requiring integration of molecular and morphological features.
 
-## 🛠️ Technical Implementation
+##️ Technical Implementation
 
 **Framework**: Nextflow DSL2 for workflow management  
 **Deep Learning**: TensorFlow/Keras for GNN implementation  
